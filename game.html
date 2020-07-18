@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+  <div class="container">
+    <canvas width="480" height="480" id="game"></canvas>
+    <div class="score_board">
+      <h1 class="score_number">Score: 0</h1>
+      <button class="setting" onclick="setting();"><img src="img/setting.png"></button>
+      <button class="sound" onclick="sound();"><img id="sound_img" src="img/sound_on.png"></button>
+    </div>
+    <div class="pause">
+      <button onclick="resume();" id="resume"><img src="img/resume.png"></button>
+    </div>
+    <div class="game_over">
+      <div>
+        <h1>Game Over</h1>
+        <button onclick="play_again();" id="play_again"><img src="img/button.png"></button>
+      </div>
+      
+    </div>
+    <div class="button">
+      
+      <form>
+        <div>
+          <label for="lenght">Initail snake lenght:</label>
+          <input type="text" name="text" id="slenght">
+        </div>
+        <div>
+          <label for="speed">Speed:</label>
+          <input type="number" id="speed" name="quantity" min="1" max="5">
+        </div>
+        <div>
+          <label for="lenght">Snake Type:</label>
+          <input type="radio" id="Rectangle" name="type" onclick="check()">
+          <label for="Rectangle">Rectangle</label>
+          <input type="radio" id="Circle" name="type" onclick="uncheck()">
+          <label for="Circle">Circle</label>
+        </div>
+      </form>
+      <button onclick="play_again();" id="play_again"><img src="img/button.png"></button>
+    </div>
+  </div>
+
+<script type="text/javascript" src="js.js"></script>
+</body>
+</html>
